@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>font-awesome:fa-file-pdf-o</string>
+	<string>font-awesome:fa-file-text-o</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.LaunchBar.action.TextToPDF</string>
+	<string>com.yourcompany.LaunchBar.action.DocPagesToPDF</string>
 	<key>CFBundleName</key>
-	<string>Text to PDF</string>
+	<string>Doc/Pages to PDF</string>
 	<key>LBDescription</key>
 	<dict>
 		<key>LBAuthor</key>
@@ -23,10 +23,18 @@
 	<dict>
 		<key>LBDefaultScript</key>
 		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>path</string>
+			</array>
+			<key>LBRequiresArgument</key>
+			<true/>
 			<key>LBResultType</key>
 			<string>unknown</string>
+			<key>LBRunInBackground</key>
+			<true/>
 			<key>LBScriptName</key>
-			<string>default.sh</string>
+			<string>default.scpt</string>
 		</dict>
 	</dict>
 </dict>

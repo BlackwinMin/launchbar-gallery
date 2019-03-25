@@ -3,7 +3,6 @@
 # LaunchBar Action Script
 #
 
-echo "$# arguments passed"
 for f in "$@"; do
     filePath=`echo ${f%.*}`
     fileType=`echo ${f##*.} | tr '[A-Z]' '[a-z]'`
