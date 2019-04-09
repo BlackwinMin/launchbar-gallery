@@ -23,6 +23,8 @@ read -r -d '' applescriptCode1 <<EOF
     return widChoose
 EOF
 
+widChoose=$(osascript -e "$applescriptCode1")
+
 idx=0
 
 for f in "$@";do
@@ -30,7 +32,6 @@ for f in "$@";do
     # 选择预设分辨率或自定义分辨率
     file_wid=$(ffmpeg -i "$f" 2>&1 | grep -E -o '\d{3,}x\d{3,}' | grep -E -o '^\d{3,}')
     
-    widChoose=$(osascript -e "$applescriptCode1")
     #echo $file_wid
     #echo $widChoose
     if [[ "$widChoose" = "$file_wid" ]];then
