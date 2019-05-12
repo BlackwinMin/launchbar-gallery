@@ -22,7 +22,7 @@ for f in "$@";do
         composite "-geometry" "+398+121" "$f" "$shellImage".png "$newFile"
     elif [ "$shellImage" = "MacBook Pro" ]; then
         composite "-geometry" "+400+119" "$f" "$shellImage".png "$newFile"
-    elif [ "$shellImage" = "iMac" ]; then
+    elif [ "$shellImage" = "iMac 5K" ]; then
         composite "-geometry" "+110+118" "$f" "$shellImage".png "$newFile"
     elif [ "$shellImage" = "iMac Pro" ]; then
         composite "-geometry" "+113+110" "$f" "$shellImage".png "$newFile"

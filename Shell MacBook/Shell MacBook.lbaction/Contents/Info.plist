@@ -15,9 +15,9 @@
 		<key>LBEmail</key>
 		<string>blackwinmin@outlook.com</string>
 		<key>LBTwitter</key>
-		<string></string>
+		<string>@Minja_Lin</string>
 		<key>LBWebsiteURL</key>
-		<string>minja.bitcron.com</string>
+		<string>https://github.com/BlackwinMin/launchbar-gallery</string>
 	</dict>
 	<key>LBScripts</key>
 	<dict>
