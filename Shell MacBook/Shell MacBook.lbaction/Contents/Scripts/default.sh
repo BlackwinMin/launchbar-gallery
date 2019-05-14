@@ -5,7 +5,7 @@ PATH=$PATH:/usr/local/bin/
 
 #调用提示框
 read -r -d '' applescriptCode1 <<'EOF'
-    set list_1 to {"MacBook", "MacBook Pro", "iMac", "iMac Pro", "ThinkVision T27", "Dell UltraSharp 27"}
+    set list_1 to {"MacBook", "MacBook Pro", "iMac 5K", "iMac Pro", "ThinkVision T27", "Dell UltraSharp 27"}
     tell application "System Events"
             set activeApp to (name of first application process whose frontmost is true)
             activate
