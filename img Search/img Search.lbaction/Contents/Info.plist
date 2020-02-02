@@ -12,8 +12,10 @@
 	<dict>
 		<key>LBAuthor</key>
 		<string>Minja</string>
+		<key>LBTwitter</key>
+		<string>@Minja_Lin</string>
 		<key>LBWebsiteURL</key>
-		<string>minja.bitcron.com</string>
+		<string>https://github.com/BlackwinMin/launchbar-gallery</string>
 	</dict>
 	<key>LBScripts</key>
 	<dict>
