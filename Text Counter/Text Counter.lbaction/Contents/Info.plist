@@ -15,9 +15,9 @@
 		<key>LBEmail</key>
 		<string></string>
 		<key>LBTwitter</key>
-		<string></string>
+		<string>@Minja_Lin</string>
 		<key>LBWebsiteURL</key>
-		<string>http://minja.bitcron.com</string>
+		<string>https://github.com/BlackwinMin/launchbar-gallery</string>
 	</dict>
 	<key>LBScripts</key>
 	<dict>
@@ -27,8 +27,16 @@
 			<array>
 				<string>string</string>
 			</array>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
+			<key>LBRequiresArgument</key>
+			<true/>
 			<key>LBResultType</key>
 			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
 			<key>LBScriptName</key>
 			<string>default.scpt</string>
 		</dict>
