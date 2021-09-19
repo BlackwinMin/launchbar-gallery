@@ -9,6 +9,7 @@ idx=0
 
 for f in "$@";do
     mogrify -strip "$f"
+    xattr -d com.apple.metadata:kMDItemWhereFroms "$f"
     let idx=$idx+1
 done && afplay "/System/Library/Sounds/Submarine.aiff"
 

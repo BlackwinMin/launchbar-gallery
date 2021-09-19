@@ -12,8 +12,10 @@
 	<dict>
 		<key>LBAuthor</key>
 		<string>Minja</string>
+		<key>LBTwitter</key>
+		<string>@Minja_Lin</string>
 		<key>LBWebsiteURL</key>
-		<string>http://minja.bitcron.com</string>
+		<string>https://github.com/BlackwinMin/launchbar-gallery</string>
 	</dict>
 	<key>LBScripts</key>
 	<dict>
@@ -21,9 +23,10 @@
 		<dict>
 			<key>LBAcceptedArgumentTypes</key>
 			<array>
-				<string>string</string>
 				<string>path</string>
 			</array>
+			<key>LBRequiresArgument</key>
+			<true/>
 			<key>LBResultType</key>
 			<string>unknown</string>
 			<key>LBRunInBackground</key>
