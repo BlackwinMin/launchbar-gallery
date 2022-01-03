@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>Obsidian.webp</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.LaunchBar.action.ObsidianVaults</string>
+	<key>CFBundleName</key>
+	<string>Obsidian Vaults</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Minja Lin</string>
+		<key>LBEmail</key>
+		<string>blackwinmin@outlook.com</string>
+		<key>LBTwitter</key>
+		<string>@Minja_Lin</string>
+		<key>LBWebsiteURL</key>
+		<string>https://github.com/BlackwinMin/launchbar-gallery</string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.py</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>icon credit: jackliu1219 from https://www.reddit.com/r/ObsidianMD/comments/l6amlf/three_icons_for_a_better_mac_experience/</string>
+</dict>
+</plist>
