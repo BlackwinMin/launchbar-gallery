@@ -10,7 +10,7 @@ my_env = os.environ.copy()
 items = []
 
 # Note: The first argument is the script's path
-vaults = sp.check_output('ls "/Users/Min/Library/Mobile Documents/iCloud~md~obsidian/Documents"', shell=True)
+vaults = sp.check_output('ls "[YOUR OBSIDIAN VAULTS PATH HERE]"', shell=True)
 vaults = str(vaults.decode('utf-8')).split("\n")
 for vault in vaults:
     if vault != "":
