@@ -7,8 +7,11 @@
 
 echo "$# arguments passed"
 for ARG in "$@"; do
-#    var=$(curl -F smfile=@"$@" https://sm.ms/api/v2/upload | grep -o -E 'https:\\/\\/i\.loli\.net\\.*\.png|https:\\/\\/i\.loli\.net\\.*\.jpg|https:\\/\\/i\.loli\.net\\.*\.jpeg' | sed 's/\\//g')
-    var=$(curl -X POST -F smfile=@"$ARG" https://sm.ms/api/v2/upload | grep -o -E '"https:\\/\\/s2\.loli\.net\\.*\.(png|jpg|jpeg)"' | sed 's/\\//g' | sed 's/"//g')
-    var2=https://images.google.com/searchbyimage?image_url=$var
-    open -a Safari $var2
+#   从 sm.ms API 切换到 Google API
+#   var=$(curl -X POST -F smfile=@"$ARG" https://sm.ms/api/v2/upload | grep -o -E '"https:\\/\\/s2\.loli\.net\\.*\.(png|jpg|jpeg)"' | sed 's/\\//g' | sed 's/"//g')
+#   var2=https://images.google.com/searchbyimage?image_url=$var
+#   open -a Safari $var2
+    var=$(curl -F encoded_image=@"$ARG" https://www.google.com/searchbyimage/upload | grep -o -E '"https:.*"' | sed 's/"//g')
+    echo "$var"
+    open -a Safari $var
 done
