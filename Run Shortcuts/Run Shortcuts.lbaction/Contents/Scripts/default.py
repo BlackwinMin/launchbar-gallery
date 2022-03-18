@@ -1,5 +1,5 @@
-#coding:utf-8
-#!/usr/bin/env python
+#!/usr/local/bin/python3
+# -*- coding: UTF-8 -*-
 #
 # LaunchBar Action Script
 #
@@ -17,7 +17,7 @@ items = []
 arg = sys.argv[1]
 arg = ".*" + arg.replace(" ", ".*") + ".*"
 s = sp.check_output('shortcuts list', shell=True)
-#s=s.decode('utf-8')
+s=s.decode('utf-8')
 sShortcuts = sp.check_output('echo "' + s + '" | grep -iE "' + arg + '"', shell=True)
 sShortcuts = sShortcuts.splitlines()
 if sShortcuts[0] == "":
@@ -26,6 +26,7 @@ if sShortcuts[0] == "":
     items.append(item)
 else:
     for sShortcut in sShortcuts:
+        sShortcut = sShortcut.decode("utf-8")
         item = {}
         item['title'] = sShortcut
         item['action'] = "run.py"

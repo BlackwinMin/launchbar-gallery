@@ -15,11 +15,11 @@
 		<key>LBEmail</key>
 		<string>blackwinmin@outlook.com</string>
 		<key>LBSummary</key>
-		<string>/Users/apple/Library/Rime/luna_pinyin.extended.dict.txt</string>
+		<string>/Users/apple/Library/Rime/custom_phrase.txt</string>
 		<key>LBTwitter</key>
-		<string></string>
+		<string>@Minja_Lin</string>
 		<key>LBWebsiteURL</key>
-		<string>minja.bitcron.com</string>
+		<string>https://github.com/BlackwinMin/launchbar-gallery</string>
 	</dict>
 	<key>LBScripts</key>
 	<dict>
@@ -42,7 +42,7 @@
 			<key>LBRunInBackground</key>
 			<true/>
 			<key>LBScriptName</key>
-			<string>default.scpt</string>
+			<string>default.py</string>
 		</dict>
 	</dict>
 </dict>

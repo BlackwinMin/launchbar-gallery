@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>font-awesome:fa-file-text-o</string>
+	<string>font-awesome:fa-bookmark</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.LaunchBar.action.ExportMyArticles</string>
+	<string>com.yourcompany.LaunchBar.action.ArticlesLibrary</string>
 	<key>CFBundleName</key>
-	<string>Articles Append</string>
+	<string>Articles Library</string>
 	<key>LBDescription</key>
 	<dict>
 		<key>LBAuthor</key>
@@ -29,14 +29,18 @@
 			</array>
 			<key>LBKeepWindowActive</key>
 			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<true/>
 			<key>LBRequiresArgument</key>
 			<true/>
 			<key>LBResultType</key>
 			<string>unknown</string>
 			<key>LBReturnsResult</key>
 			<true/>
+			<key>LBRunInBackground</key>
+			<true/>
 			<key>LBScriptName</key>
-			<string>default.scpt</string>
+			<string>default.py</string>
 		</dict>
 	</dict>
 </dict>

@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>font-awesome:fa-file-text-o</string>
+	<string>font-awesome:fa-bookmark</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.LaunchBar.action.ExportMyArticlesCopy</string>
+	<string>com.yourcompany.LaunchBar.action.ArticlesCapture</string>
 	<key>CFBundleName</key>
-	<string>Articles Search</string>
+	<string>Articles Capture</string>
 	<key>LBDescription</key>
 	<dict>
 		<key>LBAuthor</key>
