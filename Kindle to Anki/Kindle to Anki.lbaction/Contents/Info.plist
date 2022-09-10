@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>ankiTemplate.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.LaunchBar.action.AnkiFromKindle</string>
+	<key>CFBundleName</key>
+	<string>Anki from Kindle</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Minja Lin</string>
+		<key>LBEmail</key>
+		<string>blackwinmin@outlook.com</string>
+		<key>LBTwitter</key>
+		<string>@Minja_Lin</string>
+		<key>LBWebsiteURL</key>
+		<string>https://github.com/BlackwinMin/launchbar-gallery</string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBScriptName</key>
+			<string>default.sh</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
