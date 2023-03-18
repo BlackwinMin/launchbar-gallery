@@ -11,11 +11,9 @@
 	<key>LBDescription</key>
 	<dict>
 		<key>LBAuthor</key>
-		<string>Huanbo Tu, Minja Lin</string>
+		<string>Minja Lin</string>
 		<key>LBEmail</key>
-		<string>huanbo.tu@outlook.de, blackwinmin@outlook.com</string>
-		<key>LBTwitter</key>
-		<string>@tokanhaku</string>
+		<string>blackwinmin@outlook.com</string>
 		<key>LBWebsiteURL</key>
 		<string>https://github.com/BlackwinMin/launchbar-gallery</string>
 	</dict>

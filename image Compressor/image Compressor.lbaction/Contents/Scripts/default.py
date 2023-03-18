@@ -18,7 +18,7 @@ for arg in sys.argv[1:]:
                 my_command = ["pngquant", arg, "--quality", "70-95", "--ext=.png", "--force"]
                 sp.check_output(my_command, env=my_env)
         elif fileType == ".jpg" or fileType == ".jpeg":
-                my_command = ["jpegoptim", "-m70", "--max90", arg] 
+                my_command = ["jpegoptim", "-m70", "--max=90", arg] 
                 sp.check_output(my_command, env=my_env)
         elif fileType == ".gif":
                 my_command = ["gifsicle", "-i", arg, "--optimize=3", "-o", arg] 

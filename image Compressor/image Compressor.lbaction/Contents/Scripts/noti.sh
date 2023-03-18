@@ -1,3 +1,3 @@
 #!/bin/bash
 
-osascript -e 'display notification "yooo" with title "Compressed" sound name "Submarine"'
+osascript -e "tell application \"LaunchBar\" to display in notification center \"images Compressed :D\" with title \"\"" && afplay "/System/Library/Sounds/Submarine.aiff"
