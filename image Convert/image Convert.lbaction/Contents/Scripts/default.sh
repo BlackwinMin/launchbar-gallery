@@ -3,6 +3,8 @@
 # LaunchBar Action Script
 #
 
+PATH=$PATH:/usr/local/bin/
+
 echo "$# arguments passed"
 
 read -r -d '' applescriptCode1 <<'EOF'
@@ -15,13 +17,15 @@ read -r -d '' applescriptCode1 <<'EOF'
 	end tell
 EOF
 
-ffotmat=$(osascript -e "$applescriptCode1")
+fformat=$(osascript -e "$applescriptCode1")
 
 idx=0
 
 for f in "$@";do
-	sips -s format $ffotmat --out "${f%.*}.$ffotmat" "$f"
+	if [[ "${f##*.}" =~ "pdf" ]]; then
+		convert -density 300 "$f"[0] "${f%.*}.$fformat"
+	else
+		sips -s format $fformat --out "${f%.*}.$fformat" "$f"
+	fi
 	let idx=$idx+1
-done && afplay "/System/Library/Sounds/Submarine.aiff"
-
-osascript -e "display notification \"$(echo 修改了 $idx 个文件)\""
+done && afplay "/System/Library/Sounds/Submarine.aiff" && osascript -e "tell application \"LaunchBar\" to display in notification center \"Converted $idx images\" with title \"image Convert\""
