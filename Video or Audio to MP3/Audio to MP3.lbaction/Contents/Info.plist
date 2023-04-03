@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>font-awesome:fa-file-audio-o</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.LaunchBar.action.VideotoMP3Copy</string>
+	<key>CFBundleName</key>
+	<string>Audio to MP3</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Minja</string>
+		<key>LBEmail</key>
+		<string>blackwinmin@outlook.com</string>
+		<key>LBTwitter</key>
+		<string>@Minja_Lin</string>
+		<key>LBWebsiteURL</key>
+		<string>https://github.com/BlackwinMin/LaunchBar-gallery/tree/master</string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+				<string>path</string>
+			</array>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBRunInBackground</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.sh</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
