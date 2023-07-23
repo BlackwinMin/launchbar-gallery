@@ -5,7 +5,7 @@ PATH=$PATH:/usr/local/bin/
 
 for f in "$@";do
 
-if [[ $f == *.jpg ]] || [[ $f == *.JPG ]]; then
+if [[ $f == *.jpg ]] || [[ $f == *.JPG ]] || [[ $f == *.jpeg ]] || [[ $f == *.JPEG ]]; then
         imageFile="$f"
 elif [[ $f == *.mp4 ]]; then
         videoFile="$f"
