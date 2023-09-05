@@ -6,5 +6,6 @@
 
 - 相关文章：[《一键对比两个 Word 文档（附自动化）》](https://utgd.net)（发布时间未定）。
 - [Automator 版本](https://github.com/BlackwinMin/Automator-gallery/tree/master/Microsoft%20Word%20Compare)
+- [Shortcuts 版本](https://github.com/BlackwinMin/Shortcuts-Actions-gallery/tree/master/Microsoft%20Word%20Compare)
 
 ![title](img.gif)
