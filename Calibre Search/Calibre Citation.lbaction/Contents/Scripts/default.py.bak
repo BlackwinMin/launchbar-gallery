@@ -1,0 +1,84 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+import os
+import sys
+import json
+import sqlite3
+import subprocess
+
+
+class Concatenate():
+    def __init__(self):
+        self.itemList = []
+
+    def step(self, value):
+        # print 'step(%r)' % value
+        self.itemList.append(value)
+
+    def finalize(self):
+        # print("final: %r" % ",".join(self.itemList))
+        return "!@#$".join(self.itemList)
+
+queryStr = sys.argv[1]
+libraryPath = subprocess.check_output('/Applications/calibre.app/Contents/MacOS/calibre-debug -c "from calibre.utils.config import prefs; print(prefs.get(\'library_path\'),end=\'\')"', shell=True)
+metaDbPath = os.path.join(libraryPath, 'metadata.db')
+con = sqlite3.connect(metaDbPath)
+con.create_aggregate("concat", 1, Concatenate)
+cur = con.cursor()
+querySQL = """
+SELECT id, title,
+   (SELECT concat(name) FROM books_authors_link AS bal JOIN authors ON(author = authors.id) WHERE book = books.id) authors,
+   (SELECT MAX(uncompressed_size) FROM data WHERE book=books.id) size,
+   (SELECT concat(name) FROM tags WHERE tags.id IN (SELECT tag from books_tags_link WHERE book=books.id)) tags,
+   (SELECT concat(format) FROM data WHERE data.book=books.id) formats,
+   (SELECT concat(name) FROM data WHERE data.book=books.id) filename,
+   (SELECT rating FROM ratings WHERE ratings.id IN (SELECT rating from books_ratings_link WHERE book=books.id)) rating,
+   path
+FROM books
+WHERE title like '%{}%'
+""".format(queryStr)
+
+cur.execute(querySQL)
+queryResult = cur.fetchall()
+
+items = []
+
+for item in queryResult:
+    bookID = item[0]
+    bookTitle = item[1]
+    bookAuthors = item[2].replace("!@#$", ", ")
+    bookSize = item[3]
+    bookTags = item[4]
+    bookFormatList = item[5].split("!@#$")
+    bookFilenameList = item[6].split("!@#$")
+    bookRating = (str(item[7]) + "  ") if isinstance(item[7], int) else "N/A"
+    bookPath = item[8]
+    bookIcon = os.path.join(libraryPath, bookPath, "cover.jpg")
+
+    bookFormat = bookFormatList[0]
+    bookFilename = bookFilenameList[0]
+    temp = {}
+    temp["title"] = bookTitle
+    temp["icon"] = bookIcon
+    temp["subtitle"] = u"📙 {:<7} ⭐️ {:<5}  ✍️ {}".format(bookFormat, bookRating, bookAuthors)
+    temp["path"] = os.path.join(libraryPath, bookPath, bookFilename + "." + bookFormat.lower())
+    temp["actionArgument"] = os.path.join(libraryPath, bookPath, bookFilename + "." + bookFormat.lower())
+    temp['action'] = 'open.sh'
+    items.append(temp)
+
+    # if more than one format
+    if len(bookFormatList) > 1:
+        for i in range(1, len(bookFormatList)):
+            bookFormat = bookFormatList[i]
+            bookFilename = bookFilenameList[i]
+            temp = {}
+            temp["title"] = bookTitle
+            temp["icon"] = bookIcon
+            temp["subtitle"] = u"📙 {:<7} ⭐️ {:<5}  ✍️ {}".format(bookFormat, bookRating, bookAuthors)
+            temp["path"] = os.path.join(libraryPath, bookPath, bookFilename + "." + bookFormat.lower())
+            temp["actionArgument"] = os.path.join(libraryPath, bookPath, bookFilename + "." + bookFormat.lower())
+            temp['action'] = 'open.sh'
+            items.append(temp)
+
+print json.dumps(items)
