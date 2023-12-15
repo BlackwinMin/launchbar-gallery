@@ -61,62 +61,6 @@
 						<string>Copyright statement and contact information</string>
 					</dict>
 					<dict>
-						<key>ActionColor</key>
-						<string>Red</string>
-						<key>ActionUID</key>
-						<integer>12574956</integer>
-						<key>IsDisclosed</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>Comment</string>
-						<key>StyledText</key>
-						<data>
-						cnRmZAAAAAADAAAAAgAAAAcAAABU
-						WFQucnRmAQAAAC78AgAAKwAAAAEA
-						AAD0AgAAe1xydGYxXGFuc2lcYW5z
-						aWNwZzEyNTJcY29jb2FydGYyNzA5
-						Clxjb2NvYXRleHRzY2FsaW5nMFxj
-						b2NvYXBsYXRmb3JtMHtcZm9udHRi
-						bFxmMFxmbmlsXGZjaGFyc2V0MTM0
-						IFBpbmdGYW5nU0MtUmVndWxhcjt9
-						CntcY29sb3J0Ymw7XHJlZDI1NVxn
-						cmVlbjI1NVxibHVlMjU1O1xyZWQw
-						XGdyZWVuMFxibHVlMDt9CntcKlxl
-						eHBhbmRlZGNvbG9ydGJsOztcY3Nz
-						cmdiXGMwXGMwXGMwXGM4NDcwNlxj
-						bmFtZSBjb250cm9sVGV4dENvbG9y
-						O30KXHBhcmRcdHg1NjBcdHgxMTIw
-						XHR4MTY4MFx0eDIyNDBcdHgyODAw
-						XHR4MzM2MFx0eDM5MjBcdHg0NDgw
-						XHR4NTA0MFx0eDU2MDBcdHg2MTYw
-						XHR4NjcyMFxwYXJkaXJuYXR1cmFs
-						XHBhcnRpZ2h0ZW5mYWN0b3IwCgpc
-						ZjBcZnMyNiBcY2YyIDIwMjMxMjE0
-						XCdhM1wnYmFcJ2NlXCdkMlwnZDRc
-						J2RkXCdjYVwnYjFcJ2NlXCdkZVwn
-						YjdcJ2E4XCdjNVwnZDBcJ2I2XCdj
-						ZlwnYjVcJ2IxXCdjN1wnYjBcJ2I0
-						XCdiMFwnYmZcJ2RhXCdjYVwnYzdc
-						J2I3XCdmMVwnY2VcJ2FhIExhdW5j
-						aEJhclwnYTNcJ2FjXCdiOVwnY2Fc
-						J2I0XCdlNlwnZDRcJ2RhXCdkM1wn
-						ZWJcJ2M2XCdlNFwnY2JcJ2ZiXCdi
-						ZlwnZWNcJ2JkXCdkZFwnYmNcJ2Zj
-						XCdiM1wnZTVcJ2NkXCdiYlwnYjVc
-						J2M0XCdiZlwnYzlcJ2M0XCdkY1wn
-						YTFcJ2EzXCdjZVwnYWFcJ2JlXCdh
-						MVwnYzFcJ2JmXCdiMVwnZGNcJ2Mz
-						XCdlMlwnYTNcJ2FjXCdkNFwnZGRc
-						J2IyXCdjOVwnY2JcJ2FiXCdiYlwn
-						ZjdcJ2JjXCdmY1wnY2VcJ2JiXCdh
-						MVwnYTN9AQAAACMAAAABAAAABwAA
-						AFRYVC5ydGYQAAAA9pB6ZbYBAAAA
-						AAAAAAAAAA==
-						</data>
-						<key>Title</key>
-						<string>缺陷和改进方向</string>
-					</dict>
-					<dict>
 						<key>ActionUID</key>
 						<integer>12574963</integer>
 						<key>IsDisclosed</key>
@@ -222,7 +166,7 @@
 				<key>CustomIconData</key>
 				<string>KMEP-GenericApplication-/Applications/LaunchBar.app</string>
 				<key>ModificationDate</key>
-				<real>724242905.24226403</real>
+				<real>724330035.54674304</real>
 				<key>Name</key>
 				<string>Search in Current Folder</string>
 				<key>Triggers</key>
