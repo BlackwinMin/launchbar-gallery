@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>672396739.60492897</real>
+		<key>CustomIconData</key>
+		<string>KMEP-GenericApplication-/Applications/Microsoft Word.app</string>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>32932</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>set rList to {}tell application "Microsoft Word"	set rFiles to every recent file	repeat with f in rFiles		set fName to name of f		set fPath to path of f		set fAlias to POSIX path of fPath		set fFull to (fAlias as text) &amp; "/" &amp;(fName as text)		set the end of rList to fFull	end repeatend telltell application "Keyboard Maestro Engine"	setvariable "t" to rList as textend tell</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>IgnoreCaseRegEx</string>
+						<key>ActionUID</key>
+						<integer>32935</integer>
+						<key>Destination</key>
+						<string>Variable</string>
+						<key>DestinationVariable</key>
+						<string>t</string>
+						<key>MacroActionType</key>
+						<string>SearchReplace</string>
+						<key>Replace</key>
+						<string>\n/Users/Min/</string>
+						<key>Search</key>
+						<string>/Users/Min/</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>t</string>
+						<key>Which</key>
+						<string>All</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>32934</integer>
+						<key>DisplayKind</key>
+						<string>Briefly</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>export LANG="en_US.UTF-8"
+PATH=$PATH:/usr/local/bin/
+
+# 文件列表路径，请使用绝对路径，否则无法写入数据
+listPath="/Users/Min/Library/Application Support/LaunchBar/Actions/Microsoft Word Recents.lbaction/Contents/Scripts/fList.txt"
+
+echo "" &gt; "$listPath"
+
+decodedURL=`python3 -c "import sys, urllib.parse; print(urllib.parse.unquote(sys.argv[1]))" "$KMVAR_t"`
+
+# 验证文件是否存在，如果存在，则写入文件列表
+echo "$decodedURL" | sed 's/\%3A/:/g' | sed '1d' | while read line;do
+	if test -f "$line"; then
+		echo "$line" &gt;&gt; "$listPath"
+	fi
+done
+
+# 清除开头的空行，避免影响 LaunchBar 显示效果
+sed -i "" '1d' "$listPath"</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Quit</string>
+						<key>ActionUID</key>
+						<integer>33307</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.microsoft.Word</string>
+							<key>Name</key>
+							<string>Microsoft Word</string>
+							<key>NewFile</key>
+							<string>/Applications/Microsoft Word.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>QuitSpecificApp</string>
+						<key>Target</key>
+						<string>Specific</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>673061043.02937102</real>
+				<key>CustomIconData</key>
+				<string>KMEP-GenericApplication-/Applications/Microsoft Word.app</string>
+				<key>ModificationDate</key>
+				<real>673842118.66976798</real>
+				<key>Name</key>
+				<string>Save Recent Files List</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>12</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>27729DFB-46DC-4BE0-B7EC-57A7D517389E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Microsoft Word</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.microsoft.Word</string>
+					<key>Name</key>
+					<string>Microsoft Word</string>
+					<key>NewFile</key>
+					<string>/Applications/Microsoft Word.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>BA40C963-2401-4021-8B01-9116369E6EC9</string>
+		<key>UID</key>
+		<string>B3F2A12E-BC15-4CDC-B9E4-8D7E3E006EBB</string>
+	</dict>
+</array>
+</plist>
