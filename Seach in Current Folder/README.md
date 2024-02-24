@@ -6,7 +6,9 @@
 
 注意：使用前需在 Keyboard Maestro Macro 编辑器中手动启动 Macro，且因为涉及 USB Device Key Trigger，可能需要重新录制一下 `F` 键。
 
-看不懂上面的话？等文章吧！预计2024年春节前发布。
+出处：[《让 LaunchBar 支持中文文件搜索》](https://utgd.net/article/20567/)。
+
+如您使用本动作时出现错误，请参考[《用LaunchBar填上Finder窗口管理的空白》](https://utgd.net/article/20568)一文的评论和[《工具论ABC：macOS 自动化杂症自查篇》](https://utgd.net/article/20172/)先行排查。
 
 顺予指出，“LaunchBar 不支持中文”的说法本就以偏概全。LaunchBar 有导航和搜索两种模式，只是官方并未提供搜索文件夹的动作，需自行编写。
 
