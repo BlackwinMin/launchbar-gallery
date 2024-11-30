@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 import os
 import sys
 import plistlib
@@ -16,21 +18,13 @@ else:
 	_string = sys.argv[1]
 	
 urls = [
-	"http://ebookscart.com/?s=*",
-	"http://ireadweek.com/index.php/Index/bookList.html?keyword=*"
-	"http://mebook.cc/?s=*"
-	"https://sobooks.cc/search/*"
-	"http://www.sosuopan.com/search?q=*"
-	"http://www.sosoyunpan.com/search.asp?wd=*"
+	"请自行填写",
+	"请自行填写"
 	]
 	
 titles  = [
-	"eBookscart",
-	"周读",
-	"我的小书屋",
-	"SoBooks",
-	"搜索盘",
-	"搜索盘"
+	"请自行填写",
+	"请自行填写"
 	]
 	
 url_list = str(urls).replace('\'','').replace('[','').replace(']','')
