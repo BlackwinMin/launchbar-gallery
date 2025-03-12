@@ -4,7 +4,7 @@
 
 本动作在 Finder 中和 FoxTrot 搜索结果中均可使用。
 
-出处：《FoxTrot 如何实现多文件搜索》（发布时间未定）。
+出处：[FoxTrot 如何实现多文件搜索](https://utgd.net/article/21008/)。
 
 另有 [Keyboard Maestro 版](https://github.com/BlackwinMin/Keyboard-Maestro-gallery/tree/master/FoxTrot%20Search%20Multi%20Files)。
 
