@@ -4,4 +4,4 @@
 
 出处：《LaunchBar 文件夹平铺与全路径导航定位》（发布时间未定）。
 
-![img](img.gif)
+![img](img.png)
