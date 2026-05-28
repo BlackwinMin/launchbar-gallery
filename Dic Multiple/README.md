@@ -2,7 +2,7 @@
 
 在 macOS 原生词典中一次性查询多个单词且并排显示，方便比对词义、斟酌用词。
 
-20260528 更新：平铺查词窗口而非堆叠，方便直接比对；改用 AppleScript。
+20260528 更新：平铺查词窗口而非堆叠，方便直接比对；改用 AppleScript。[Keyboard Maestro 版](https://github.com/BlackwinMin/Keyboard-Maestro-gallery/tree/master/Dic%20Multiple)和 [Automator 版](https://github.com/BlackwinMin/Automator-gallery/tree/master/Dic%20Multiple)我平时都不用，所以不再更新，只更新本 LaunchBar 版。反正核心全是 AppleScript 代码，自己移植一下就能用。
 
 ![title](img2.gif)
 
@@ -11,6 +11,3 @@
 出处：[《在 macOS 原生词典中批量查词（多窗口）》](https://utgd.net/article/20530)
 
 ![title](img.gif)
-
-- [Keyboard Maestro 版](https://github.com/BlackwinMin/Keyboard-Maestro-gallery/tree/master/Dic%20Multiple)
-- [Automator 版](https://github.com/BlackwinMin/Automator-gallery/tree/master/Dic%20Multiple)
