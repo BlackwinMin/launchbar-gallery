@@ -27,10 +27,12 @@
 			<array>
 				<string>string</string>
 			</array>
+			<key>LBResultType</key>
+			<string>unknown</string>
 			<key>LBRunInBackground</key>
 			<true/>
 			<key>LBScriptName</key>
-			<string>default.scpt</string>
+			<string>default.sh</string>
 		</dict>
 	</dict>
 </dict>
