@@ -4,6 +4,6 @@
 
 基于 7z，需自行安装，并检查路径与脚本是否一致。仅支持 Zip。
 
-出处：《在 LaunchBar 中预览压缩包并解压指定文件》（发布时间未定）。
+出处：[《在 LaunchBar 中预览压缩包并解压指定文件》](https://utgd.net/article/21382)。
 
 ![img](img.gif)
